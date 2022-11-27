@@ -6,8 +6,10 @@ public class Main {
     public static void main(String[] args) {
 
         Controller controller = new Controller();
-        controller.createUser("Name",
-                "LastName",
-                "Patronic");
+        controller.createUser("Ivan", "Ivanov", "Ivanovich");
+        controller.createUser("Petr", "Petrov", "Petrovich");
+        controller.createUser("Aleksandr", "Aleksandrov", "Sanich");
+        controller.createUser("Stepan", "Stepanov", "Stepanich");
+
     }
 }

@@ -18,4 +18,14 @@ public class Student extends User{
 
         this.studentId = studentId;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "firstName='" + Student.super.getFirstName() + '\'' +
+                ", lastName='" + Student.super.getLastName() + '\'' +
+                ", patronymic='" + Student.super.getPatronymic() + '\'' +
+                ", studentId=" + studentId +
+                '}';
+    }
 }
