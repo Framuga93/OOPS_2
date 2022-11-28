@@ -36,4 +36,13 @@ public class StudentGroup {
     public void setGroupId(Long groupId) {
         this.groupId = groupId;
     }
+
+    @Override
+    public String toString() {
+        return "StudentGroup{" +
+                "students=" + students +
+                ", teacher=" + teacher +
+                ", groupId=" + groupId +
+                '}';
+    }
 }

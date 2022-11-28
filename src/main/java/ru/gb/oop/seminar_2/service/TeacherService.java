@@ -10,7 +10,7 @@ import java.util.List;
 public class TeacherService implements DataService{
     private final List<User> users;
 
-    public TeacherService(List<User> users) {
+    public TeacherService() {
         this.users = new ArrayList<>();
     }
 
