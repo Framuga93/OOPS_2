@@ -1,6 +1,6 @@
 package ru.gb.oop.seminar_2.data;
 
-public class User {
+public abstract class User {
     private String firstName;
     private String lastName;
     private String patronymic;

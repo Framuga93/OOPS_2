@@ -1,6 +1,5 @@
 package ru.gb.oop.seminar_2.view;
 
-import ru.gb.oop.seminar_2.data.Student;
 import ru.gb.oop.seminar_2.data.User;
 
 import java.util.List;

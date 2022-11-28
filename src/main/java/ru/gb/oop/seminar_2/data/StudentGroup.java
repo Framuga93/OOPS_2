@@ -6,6 +6,8 @@ public class StudentGroup {
     private List<Student> students;
     private Teacher teacher;
 
+    private Long groupId;
+
     public StudentGroup(Teacher teacher, List<Student> students) {
         this.students = students;
         this.teacher = teacher;
@@ -25,5 +27,13 @@ public class StudentGroup {
 
     public void setTeacher(Teacher teacher) {
         this.teacher = teacher;
+    }
+
+    public Long getGroupId() {
+        return groupId;
+    }
+
+    public void setGroupId(Long groupId) {
+        this.groupId = groupId;
     }
 }
