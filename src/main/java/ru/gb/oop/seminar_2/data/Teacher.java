@@ -1,7 +1,10 @@
 package ru.gb.oop.seminar_2.data;
 
+import java.util.concurrent.atomic.AtomicLong;
+
 public class Teacher extends User{
 
+//    private AtomicLong tempId = new AtomicLong(0);
     private Long teacherId;
 
     public Teacher(String firstName, String lastName, String patronymic, Long teacherId) {

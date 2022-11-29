@@ -1,19 +1,22 @@
 package ru.gb.oop.seminar_2.data;
 
 import java.util.List;
+import java.util.concurrent.atomic.AtomicLong;
 
 public class StudentGroup {
     private List<Student> students;
     private Teacher teacher;
+    private Long id;
 
-    private Long groupId;
+    private static AtomicLong groupId = new AtomicLong(0);
 
     public StudentGroup(Teacher teacher, List<Student> students) {
         this.students = students;
         this.teacher = teacher;
+        this.id = groupId.incrementAndGet();
     }
 
-    public List<Student> getStudents() {
+    public List<? extends User> getStudents() {
         return students;
     }
 
@@ -29,20 +32,20 @@ public class StudentGroup {
         this.teacher = teacher;
     }
 
-    public Long getGroupId() {
+    public AtomicLong getGroupId() {
         return groupId;
     }
 
-    public void setGroupId(Long groupId) {
+    public void setGroupId(AtomicLong groupId) {
         this.groupId = groupId;
     }
 
     @Override
     public String toString() {
         return "StudentGroup{" +
-                "students=" + students +
-                ", teacher=" + teacher +
-                ", groupId=" + groupId +
+                " group №" + this.id +
+                ", students=" + this.students +
+                ", teacher=" + this.teacher +
                 '}';
     }
 }

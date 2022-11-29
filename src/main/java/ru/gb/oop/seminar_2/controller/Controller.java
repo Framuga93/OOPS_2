@@ -23,26 +23,26 @@ public class Controller {
 
     public void createStudent(String firstName, String lastName, String patronymic) {
         studentService.createUser(firstName, lastName, patronymic);
-        List<User> students = studentService.getAll();
+        List<? extends User> students = studentService.getAll();
         studentView.sendOnConsole(students);
     }
 
     public void createTeacher (String firstName, String lastName, String patronymic){
         teacherService.createUser(firstName, lastName, patronymic);
-        List<User> teachers = teacherService.getAll();
+        List<? extends User> teachers = teacherService.getAll();
         studentView.sendOnConsole(teachers);
     }
-    public List<User> getStudentList(){
+    public List<Student> getStudentList(){
         return studentService.getAll();
     }
 
-    public List<User> getTeacherList(){
+    public List<Teacher> getTeacherList(){
         return teacherService.getAll();
     }
 
-    public void createGroup(Teacher teacher, List<User> students){
+    public void createGroup(Teacher teacher, List<Student> students){
         studentGroupService.createGroup(teacher,students);
-        List<User> group = studentGroupService.getAll();
-        studentView.sendOnConsole(group);
+        List<StudentGroup> group = studentGroupService.getAll();
+        studentView.showGroup(group);
     }
 }

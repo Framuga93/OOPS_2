@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StudentService implements DataService {
-    private final List<User> users;
+    private final List<Student> users;
 
     public StudentService() {
         this.users = new ArrayList<>();
@@ -28,7 +28,7 @@ public class StudentService implements DataService {
     }
 
     @Override
-    public List<User> getAll() {
+    public List<Student> getAll() {
         return this.users;
     }
 
